@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 68" width="340" height="68">
+  <defs>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00A2E8"/>
+      <stop offset="100%" stop-color="#005B94"/>
+    </linearGradient>
+    <linearGradient id="cyanGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00D2FF"/>
+      <stop offset="100%" stop-color="#0080C0"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00A2E8"/>
+      <stop offset="100%" stop-color="#002D52"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Modern Graphic Symbol: Dynamic Tri-Vortex Airflow / Cooling Triangle -->
+  <g transform="translate(6, 6)">
+    <!-- Primary dynamic geometric wing -->
+    <path d="M 4 48 L 28 6 C 29.5 3.5 33.5 3.5 35 6 L 52 36 C 53.5 38.5 51.5 42 48 42 L 10 42 C 6.5 42 4.5 45.5 6 48 Z" fill="url(#blueGrad)"/>
+    <!-- Overlapping precision aerodynamic fin -->
+    <path d="M 28 6 L 46 38 C 47.5 41 51.5 41 53 38 L 58 29 C 59 27 58 24.5 56 23 L 34 5 C 31.5 3 29 4 28 6 Z" fill="url(#cyanGrad)" opacity="0.9"/>
+    <!-- Precision cooling core node -->
+    <circle cx="28" cy="27" r="4.5" fill="#FFFFFF"/>
+    <circle cx="28" cy="27" r="2.5" fill="#00A2E8"/>
+  </g>
+
+  <!-- Typography: SAS-CAN SERVICES -->
+  <g transform="translate(76, 12)">
+    <!-- Primary Brand Wordmark -->
+    <text x="0" y="32" font-family="'Inter', 'Montserrat', 'Roboto', 'Segoe UI', sans-serif" font-weight="900" font-size="31" letter-spacing="0.5" fill="#0A2540">SAS<tspan fill="#00A2E8">-</tspan>CAN</text>
+    
+    <!-- Professional Descriptor -->
+    <text x="1" y="48" font-family="'Inter', 'Roboto', 'Segoe UI', sans-serif" font-weight="700" font-size="10.5" letter-spacing="3.8" fill="#0077B6">APPLIED SERVICES</text>
+    
+    <!-- Engineering Subtitle Tag -->
+    <text x="145" y="48" font-family="'Inter', 'Roboto', 'Segoe UI', sans-serif" font-weight="500" font-size="9" letter-spacing="1.2" fill="#6A7B8C">| HVAC &amp; BMS</text>
+  </g>
+</svg>
