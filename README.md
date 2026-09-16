@@ -220,7 +220,8 @@ The solutions and specifications referenced in this application comply with stan
 
 ## 📞 24/7 Dispatch & Support
 
-- **Emergency Dispatch Hotline**: 1-800-SAS-HVAC (727-4822)
+- **Emergency Dispatch Hotline**: [253.780.5151](tel:2537805151)
+- **Direct Support Email**: [pmaatsb@gmail.com](mailto:pmaatsb@gmail.com)
 - **Engineering Inquiries**: [rep-locator.html](rep-locator.html)
 - **Factory Direct Depot**: [parts.html](parts.html)
 
