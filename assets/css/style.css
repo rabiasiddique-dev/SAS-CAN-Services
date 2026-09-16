@@ -835,48 +835,58 @@ button, input, select, textarea { font-family: inherit; font-size: inherit; }
 }
 
 /* ============================================================
-   HERO SLIDER — FULLY FIXED
+   HERO SLIDER
    ============================================================ */
 .hero-slider-section {
   position: relative;
-  background: var(--navy-dark);
   overflow: hidden;
+  width: 100%;
+  background: #071828;
 }
 .hero-slider-container {
   position: relative;
-  min-height: 600px;
-  display: flex;
-  align-items: stretch;
+  width: 100%;
+  height: 620px;
+  min-height: 620px;
 }
+/* All slides are absolutely stacked on top of each other — full width/height */
 .hero-slide {
   position: absolute;
-  inset: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   display: flex;
   align-items: center;
   opacity: 0;
   visibility: hidden;
-  transition: opacity .9s ease, visibility .9s;
+  pointer-events: none;
+  transition: opacity 0.85s cubic-bezier(0.4,0,0.2,1), visibility 0.85s;
   background-size: cover;
-  background-position: center;
+  background-position: center center;
   background-repeat: no-repeat;
-  min-height: 600px;
+  z-index: 1;
 }
 .hero-slide.active {
   opacity: 1;
   visibility: visible;
-  position: relative;
-  z-index: 1;
+  pointer-events: auto;
+  z-index: 2;
 }
-/* Background color fallbacks for hero slides */
-.hero-slide:nth-child(1) { background-color: #071828; }
-.hero-slide:nth-child(2) { background-color: #0a1e33; }
-.hero-slide:nth-child(3) { background-color: #071622; }
-.hero-slide:nth-child(4) { background-color: #071118; }
-
+/* Overlay: left-biased gradient so image is visible on the right */
 .hero-overlay {
   position: absolute;
-  inset: 0;
-  background: rgba(9, 23, 37, 0.72);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(5, 18, 32, 0.88) 0%,
+    rgba(5, 18, 32, 0.65) 42%,
+    rgba(5, 18, 32, 0.22) 75%,
+    rgba(5, 18, 32, 0.08) 100%
+  );
   z-index: 1;
 }
 .hero-content {
@@ -1812,7 +1822,8 @@ button, input, select, textarea { font-family: inherit; font-size: inherit; }
    RESPONSIVE — 900px
    ============================================================ */
 @media (max-width: 900px) {
-  .hero-slider-container, .hero-slide { min-height: 500px; }
+  .hero-slider-container { height: 500px; min-height: 500px; }
+  .hero-slide { height: 100%; min-height: 500px; }
   .hero-content { padding: 60px 0; }
   .news-grid { grid-template-columns: repeat(2,1fr); }
   .stats-row { grid-template-columns: repeat(2,1fr); }
@@ -1829,7 +1840,9 @@ button, input, select, textarea { font-family: inherit; font-size: inherit; }
   .brand-title { font-size: 1.3rem; }
   .brand-subtitle { font-size: 0.58rem; }
 
-  .hero-slider-container, .hero-slide { min-height: 440px; }
+  .hero-slider-container { height: 480px; min-height: 480px; }
+  .hero-slide { height: 100%; min-height: 480px; }
+  .hero-overlay { background: linear-gradient(180deg, rgba(7, 24, 40, 0.86) 0%, rgba(7, 24, 40, 0.72) 100%); }
   .hero-content { padding: 48px 0; max-width: 100%; }
   .hero-title { font-size: clamp(1.65rem, 5vw, 2.1rem); }
   .hero-description { font-size: .95rem; }
@@ -1873,7 +1886,8 @@ button, input, select, textarea { font-family: inherit; font-size: inherit; }
 @media (max-width: 480px) {
   .container { padding: 0 16px; }
 
-  .hero-slider-container, .hero-slide { min-height: 380px; }
+  .hero-slider-container { height: 380px; min-height: 380px; }
+  .hero-slide { height: 100%; min-height: 380px; }
   .hero-title { font-size: 1.55rem; }
   .hero-description { font-size: .90rem; margin-bottom: 24px; }
   .hero-eyebrow { font-size: .68rem; }
