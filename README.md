@@ -28,7 +28,7 @@
 
 ## 🌟 Overview
 
-**SAS-CAN Services** is a comprehensive corporate web application built for commercial and industrial applied HVAC equipment, technical dispatch, decarbonization engineering, and OEM parts distribution. Inspired by industry benchmarks (such as Daikin Applied, Trane Commercial, and Carrier Applied), the platform provides engineers, architects, mechanical contractors, and facility directors with immediate access to technical specifications, equipment selection tools, and 24/7 service dispatch.
+**SAS-CAN Services** is a comprehensive corporate web application built for commercial and industrial applied HVAC equipment, technical dispatch, decarbonization engineering, and OEM parts distribution. Inspired by industry benchmarks (including leading global applied commercial HVAC systems), the platform provides engineers, architects, mechanical contractors, and facility directors with immediate access to technical specifications, equipment selection tools, and 24/7 service dispatch.
 
 ---
 

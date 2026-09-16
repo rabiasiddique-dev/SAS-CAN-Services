@@ -1,6 +1,6 @@
 /* ==========================================================================
    SAS-CAN Services — Master Corporate Stylesheet v2.0
-   Deep-matched to Daikin Applied (daikinapplied.com) — All bugs fixed
+   Commercial & Industrial Applied HVAC Solutions
    ========================================================================== */
 
 /* ─── DESIGN TOKENS ──────────────────────────────────────────────────────── */
@@ -1219,30 +1219,105 @@ button, input, select, textarea { font-family: inherit; font-size: inherit; }
    IAQ / DECARBONIZATION BANNER
    ============================================================ */
 .iaq-banner-section {
-  background: linear-gradient(140deg, #091725 0%, #003d6b 60%, #004d84 100%);
+  background: linear-gradient(135deg, #061523 0%, #0a2540 50%, #004273 100%);
   color: #fff;
-  padding: 72px 0;
+  padding: 76px 0;
   position: relative;
   overflow: hidden;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 .iaq-banner-section::before {
   content: '';
   position: absolute;
-  top: -100px; right: -100px;
-  width: 500px; height: 500px;
-  background: radial-gradient(circle, rgba(0,162,232,.12) 0%, transparent 70%);
+  top: -120px; right: -100px;
+  width: 520px; height: 520px;
+  background: radial-gradient(circle, rgba(0,162,232,.18) 0%, transparent 70%);
   pointer-events: none;
 }
-.iaq-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; align-items: center; gap: 52px; }
-.iaq-content h2 { font-size: clamp(1.7rem, 2.5vw, 2.4rem); font-weight: 600; letter-spacing: -0.02em; margin-bottom: 14px; line-height: 1.2; }
-.iaq-content p  { font-size: 1rem; color: #c4d4e4; margin-bottom: 28px; line-height: 1.65; }
-.iaq-features   { display: grid; grid-template-columns: repeat(2,1fr); gap: 16px; margin-bottom: 32px; }
-.iaq-feature-item { display: flex; align-items: flex-start; gap: 11px; }
-.iaq-feature-icon { color: var(--cyan); font-size: 1.25rem; margin-top: 2px; flex-shrink: 0; }
-.iaq-feature-text h5 { font-size: .88rem; font-weight: 600; margin-bottom: 2px; }
-.iaq-feature-text p  { font-size: .78rem; color: #96b0c4; margin: 0; line-height: 1.4; }
-.iaq-graphic { text-align: center; }
-.iaq-graphic img { max-height: 320px; margin: 0 auto; border-radius: var(--r-md); box-shadow: var(--shadow-lg); }
+.iaq-grid { display: grid; grid-template-columns: 1.25fr 0.75fr; align-items: center; gap: 52px; }
+.iaq-content { position: relative; z-index: 2; }
+.iaq-content h2 { 
+  font-size: clamp(1.85rem, 2.6vw, 2.5rem); 
+  font-weight: 700; 
+  letter-spacing: -0.025em; 
+  margin-bottom: 16px; 
+  line-height: 1.22; 
+  color: #ffffff !important; 
+}
+.iaq-content p { 
+  font-size: 1.04rem; 
+  color: #e2e8f0 !important; 
+  margin-bottom: 30px; 
+  line-height: 1.7; 
+}
+.iaq-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: rgba(0, 162, 232, 0.20) !important;
+  color: #38bdf8 !important;
+  border: 1px solid rgba(56, 189, 248, 0.4);
+  font-size: .75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  padding: 6px 14px;
+  border-radius: 20px;
+  margin-bottom: 18px;
+}
+.iaq-features { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px 24px; margin-bottom: 34px; }
+.iaq-feature-item { display: flex; align-items: flex-start; gap: 14px; }
+.iaq-feature-icon { 
+  color: #38bdf8; 
+  font-size: 1.25rem; 
+  margin-top: 2px; 
+  flex-shrink: 0; 
+  background: rgba(0, 162, 232, 0.16);
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(56, 189, 248, 0.3);
+}
+.iaq-feature-text h5 { 
+  font-size: 1rem; 
+  font-weight: 600; 
+  margin-bottom: 4px; 
+  color: #ffffff !important; 
+}
+.iaq-feature-text p { 
+  font-size: .86rem; 
+  color: #cbd5e1 !important; 
+  margin: 0; 
+  line-height: 1.5; 
+}
+.iaq-content .btn-cyan {
+  background: var(--cyan);
+  color: #071828 !important;
+  border-color: var(--cyan);
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 13px 26px;
+  border-radius: var(--r-xs);
+  box-shadow: 0 4px 16px rgba(0, 162, 232, 0.35);
+}
+.iaq-content .btn-cyan:hover {
+  background: #38bdf8;
+  border-color: #38bdf8;
+  color: #071828 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 162, 232, 0.5);
+}
+.iaq-graphic { text-align: center; position: relative; z-index: 2; }
+.iaq-graphic img { 
+  max-height: 330px; 
+  margin: 0 auto; 
+  border-radius: var(--r-md); 
+  filter: drop-shadow(0 15px 25px rgba(0,0,0,0.45)); 
+}
 
 /* ============================================================
    BMS PLATFORM SECTION
@@ -1410,7 +1485,7 @@ button, input, select, textarea { font-family: inherit; font-size: inherit; }
    ============================================================ */
 .locator-banner-section { padding: 60px 0; background: linear-gradient(140deg, #0061a5 0%, #003d6b 100%); color: #fff; }
 .locator-banner-grid    { display: grid; grid-template-columns: 1.2fr 0.8fr; align-items: center; gap: 40px; }
-.locator-banner-text h2 { font-size: clamp(1.5rem, 2vw, 2.2rem); font-weight: 600; letter-spacing: -0.02em; margin-bottom: 10px; }
+.locator-banner-text h2 { font-size: clamp(1.5rem, 2vw, 2.2rem); font-weight: 600; letter-spacing: -0.02em; margin-bottom: 10px; color: #fff !important; }
 .locator-banner-text p  { font-size: 1rem; color: rgba(255,255,255,.8); line-height: 1.5; }
 .locator-quick-form { background: #fff; padding: 22px; border-radius: var(--r-md); box-shadow: var(--shadow-lg); display: flex; gap: 10px; }
 .locator-input { flex: 1; padding: 12px 16px; border: 1px solid var(--border); border-radius: var(--r-xs); font-size: .92rem; outline: none; }
@@ -1827,6 +1902,7 @@ button, input, select, textarea { font-family: inherit; font-size: inherit; }
   .hero-content { padding: 60px 0; }
   .news-grid { grid-template-columns: repeat(2,1fr); }
   .stats-row { grid-template-columns: repeat(2,1fr); }
+  .iaq-grid { grid-template-columns: 1fr; gap: 36px; }
   .iaq-features { grid-template-columns: 1fr; }
 }
 
